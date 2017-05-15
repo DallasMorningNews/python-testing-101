@@ -1,6 +1,12 @@
 # Testing basics
 
-## Reading
+## What's in here
+
+- **[dumbfunctions.py](dumbetesting.py)**: This is just some sample code, which we'll exercise with our tests
+- **[tests.py](tests.py)**: A Python module with two "test cases"; running this file will run our tests
+- **[circle.yml](circle.yml)**: A configuration file for [Circle CI](https://circleci.com/), which is wired to this repo as a continuos integration service
+
+## Related reading
 
 - [Testing Your Code, The Hitchiker's Guide to Python](http://python-guide-pt-br.readthedocs.io/en/latest/writing/tests/)
 - [Testing in Django, official Django docs](https://docs.djangoproject.com/en/1.11/topics/testing/)
@@ -41,7 +47,7 @@ To run tests:
 $ python tests.py
 ```
 
-To check test coverage while running tests:
+To run tests and check test coverage:
 
 ```sh
 $ coverage run --omit='venv/**/*.py,tests.py' tests.py
