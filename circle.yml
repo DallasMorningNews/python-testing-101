@@ -1,6 +1,6 @@
 machine:
   python:
-    version: 3.4
+    version: 3.4.6
 dependencies:
   override:
     - pip install -r requirements-py3.txt
