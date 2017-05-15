@@ -30,13 +30,7 @@ _Optional_
 2. Install dependencies:
 
   ```sh
-  # for Python 2
-  $ pip install -r requirements-py2.txt
-  ```
-
-  ```sh
-  # for Python 3
-  $ pip install -r requirements-py3.txt
+  $ pip install -r requirements.txt
   ```
 
 ## Usage

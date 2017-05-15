@@ -1,10 +1,5 @@
 import unittest
-try:
-    # mock is built into Python 3
-    from unittest.mock import patch
-except ImportError:
-    # for Python 2, we have to install it
-    from mock import patch
+from mock import patch
 
 from dumbfunctions import site_is_up, square
 
