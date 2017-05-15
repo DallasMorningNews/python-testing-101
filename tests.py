@@ -1,6 +1,8 @@
 import unittest
 from mock import patch
 
+from requests import Response
+
 from dumbfunctions import site_is_up, square
 
 
@@ -22,21 +24,24 @@ class TestDumbMathFunctions(unittest.TestCase):
 class TestDumbRequestsFunctions(unittest.TestCase):
     @patch('dumbfunctions.requests')
     def test_site_requested(self, mock_requests):
-        """Should make a GET request to passed URL"""
+        """Should make one GET request to passed URL"""
         site_is_up('http://www.google.com')
-        mock_requests.get.assert_called_once_with('http://www.google.com')
+        mock_requests.get.assert_called_with('http://www.google.com')
+        self.assertEqual(mock_requests.get.call_count, 1)
 
     @patch('dumbfunctions.requests')
-    def test_request_ok(self, mock_requests):
+    def test_request_fails(self, mock_requests):
         """Should return False if URL errors"""
+        mock_requests.get.return_value = Response()
         mock_requests.get.return_value.status_code = 500
-        self.assertEqual(site_is_up(), False)
+        self.assertEqual(site_is_up('not-a-url.aaaaaa'), False)
 
     @patch('dumbfunctions.requests')
-    def test_request_fails(self,  mock_requests):
-        """Should return True if URL return OK status code"""
+    def test_request_ok(self,  mock_requests):
+        """Should return True if URL returns OK status code"""
+        mock_requests.get.return_value = Response()
         mock_requests.get.return_value.status_code = 200
-        self.assertEqual(site_is_up(), True)
+        self.assertEqual(site_is_up('not-a-url.aaaaaa'), True)
 
 
 if __name__ == '__main__':

@@ -9,7 +9,7 @@ def square(num):
     return num * num
 
 
-def site_is_up(url='http://example.com'):
+def site_is_up(url):
     r = requests.get(url)
 
     if r.status_code == 200:
