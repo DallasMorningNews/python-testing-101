@@ -1,5 +1,7 @@
 # Testing basics
 
+[![CircleCI token](https://img.shields.io/circleci/token/ab0c79940dd8b720258ea65fbbd9ce3d4cf965fb/project/github/DallasMorningNews/python-testing-101/master.svg)](https://circleci.com/gh/DallasMorningNews/python-testing-101)
+
 ## What's in here
 
 - **[dumbfunctions.py](dumbfunctions.py)**: This is just some sample code, which we'll exercise with our tests
