@@ -2,7 +2,7 @@
 
 ## What's in here
 
-- **[dumbfunctions.py](dumbetesting.py)**: This is just some sample code, which we'll exercise with our tests
+- **[dumbfunctions.py](dumbfunctions.py)**: This is just some sample code, which we'll exercise with our tests
 - **[tests.py](tests.py)**: A Python module with two "test cases"; running this file will run our tests
 - **[circle.yml](circle.yml)**: A configuration file for [Circle CI](https://circleci.com/), which is wired to this repo as a continuos integration service
 
