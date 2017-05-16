@@ -1,9 +1,10 @@
 import unittest
-from mock import patch
 
+from freezegun import freeze_time
+from mock import patch
 from requests import Response
 
-from dumbfunctions import site_is_up, square
+from dumbfunctions import site_is_up, square, todays_day
 
 
 class TestDumbMathFunctions(unittest.TestCase):
@@ -42,6 +43,12 @@ class TestDumbRequestsFunctions(unittest.TestCase):
         mock_requests.get.return_value = Response()
         mock_requests.get.return_value.status_code = 200
         self.assertEqual(site_is_up('not-a-url.aaaaaa'), True)
+
+
+@freeze_time('2017-05-03')
+class TestDumbDayFunction(unittest.TestCase):
+    def test_todays_day(self):
+        self.assertEqual(todays_day(), 'Today is Wednesday')
 
 
 if __name__ == '__main__':
