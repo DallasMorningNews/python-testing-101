@@ -35,6 +35,11 @@ _Optional_
   $ virtualenv venv --python=python3
   ```
 
+2. _Optional:_ If you created a virtual environment, step into it before install dependencies on the next step.
+  ```sh
+  $ source venv/bin/activate
+  ```
+
 2. Install dependencies:
 
   ```sh
