@@ -25,26 +25,25 @@ _Optional_
 
 1. _Optional:_ Create a virtual environment:
 
-  ```sh
-  # for Python 2
-  $ virtualenv venv
-  ```
+    ```sh
+    # for Python 2
+    $ virtualenv venv
+    ```
 
-  ```sh
-  # for Python 3
-  $ virtualenv venv --python=python3
-  ```
+    ```sh
+    # for Python 3
+    $ virtualenv venv --python=python3
+    ```
 
 2. _Optional:_ If you created a virtual environment, step into it before install dependencies on the next step.
-  ```sh
-  $ source venv/bin/activate
-  ```
+    ```sh
+    $ source venv/bin/activate
+    ```
 
-2. Install dependencies:
-
-  ```sh
-  $ pip install -r requirements.txt
-  ```
+3. Install dependencies:
+    ```sh
+    $ pip install -r requirements.txt
+    ```
 
 ## Usage
 
