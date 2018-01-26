@@ -16,7 +16,7 @@ def square(num):
 def site_is_up(url):
     r = requests.get(url)
 
-    if r.status_code == 200:
+    if r.status_code >= 200 and r.status_code < 400:
         return True
     else:
         return False
