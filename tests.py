@@ -1,7 +1,10 @@
 import unittest
 
 from freezegun import freeze_time
-from mock import patch
+try:
+    from mock import patch
+except ImportError:
+    from unittest.mock import patch
 from requests import Response
 
 from dumbfunctions import count_csv_rows, site_is_up, square, todays_day
@@ -23,12 +26,13 @@ class TestDumbMathFunctions(unittest.TestCase):
 
 
 class TestDumbRequestsFunctions(unittest.TestCase):
-    @patch('dumbfunctions.requests')
+    @patch('dumbfunctions.requests.get')
     def test_site_requested(self, mock_requests):
         """Should make one GET request to passed URL"""
+        mock_requests.return_value.status_code = 200
         site_is_up('http://www.google.com')
-        mock_requests.get.assert_called_with('http://www.google.com')
-        self.assertEqual(mock_requests.get.call_count, 1)
+        mock_requests.assert_called_with('http://www.google.com')
+        self.assertEqual(mock_requests.call_count, 1)
 
     @patch('dumbfunctions.requests')
     def test_request_fails(self, mock_requests):
