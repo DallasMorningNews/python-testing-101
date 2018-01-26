@@ -4,7 +4,7 @@ from freezegun import freeze_time
 from mock import patch
 from requests import Response
 
-from dumbfunctions import site_is_up, square, todays_day
+from dumbfunctions import count_csv_rows, site_is_up, square, todays_day
 
 
 class TestDumbMathFunctions(unittest.TestCase):
@@ -48,7 +48,14 @@ class TestDumbRequestsFunctions(unittest.TestCase):
 @freeze_time('2017-05-03')
 class TestDumbDayFunction(unittest.TestCase):
     def test_todays_day(self):
+        """Should return the current day of the week"""
         self.assertEqual(todays_day(), 'Today is Wednesday')
+
+
+class TestDumbCsvFunction(unittest.TestCase):
+    def test_returns_row_count(self):
+        """Should count the number of rows in a CSV"""
+        self.assertEqual(count_csv_rows('fixtures/csv_input.csv'), 2)
 
 
 if __name__ == '__main__':

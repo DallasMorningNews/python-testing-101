@@ -1,4 +1,4 @@
 requests
 coverage
-mock
 freezegun
+flake8
