@@ -129,3 +129,5 @@ ENV/
 /site
 
 # End of https://www.gitignore.io/api/python,osx
+
+NOTES.md
