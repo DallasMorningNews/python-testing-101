@@ -33,6 +33,7 @@ class TestDumbRequestsFunctions(unittest.TestCase):
         site_is_up('http://www.google.com')
         mock_requests.assert_called_with('http://www.google.com')
         self.assertEqual(mock_requests.call_count, 1)
+        self.assertTrue(site_is_up)
 
     @patch('dumbfunctions.requests')
     def test_request_fails(self, mock_requests):
