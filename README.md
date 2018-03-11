@@ -1,15 +1,17 @@
 # Testing basics [![CircleCI token](https://img.shields.io/circleci/token/ab0c79940dd8b720258ea65fbbd9ce3d4cf965fb/project/github/DallasMorningNews/python-testing-101/master.svg)](https://circleci.com/gh/DallasMorningNews/python-testing-101)
 
-This repo contains the files for our Python/Django testing brown bag.
+This repo contains the files for the #NICAR18 session "[Python: Writing Tests For Your Code](https://www.ire.org/events-and-training/event/3189/3631/)" and the DMN's Python/Django testing brown bag.
 
 ## What's in here
 
 - **[dumbfunctions.py](dumbfunctions.py)**: This is just some sample code, which we'll exercise with our tests
 - **[tests.py](tests.py)**: A Python module with two "test cases"; running this file will run our tests
-- **[circle.yml](circle.yml)**: A configuration file for [Circle CI](https://circleci.com/), which is wired to this repo as a continuos integration service
+- **[circle.yml](circle.yml)**: A configuration file for [Circle CI](https://circleci.com/), which is wired to this repo as a continuous integration service
 
 ## Related reading
 
+- [Unit testing framework, official Python docs](https://docs.python.org/3.6/library/unittest.html)
+- [Mock object library, official Python docs](https://docs.python.org/3/library/unittest.mock.html)
 - [Testing Your Code, The Hitchiker's Guide to Python](http://python-guide-pt-br.readthedocs.io/en/latest/writing/tests/)
 - [Testing in Django, official Django docs](https://docs.djangoproject.com/en/1.11/topics/testing/)
 
