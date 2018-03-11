@@ -12,7 +12,7 @@ This repo contains the files for the #NICAR18 session "[Python: Writing Tests Fo
 
 - [Unit testing framework, official Python docs](https://docs.python.org/3.6/library/unittest.html)
 - [Mock object library, official Python docs](https://docs.python.org/3/library/unittest.mock.html)
-- [Testing Your Code, The Hitchiker's Guide to Python](http://python-guide-pt-br.readthedocs.io/en/latest/writing/tests/)
+- [Testing Your Code, The Hitchiker's Guide to Python](http://docs.python-guide.org/en/latest/writing/tests/)
 - [Testing in Django, official Django docs](https://docs.djangoproject.com/en/1.11/topics/testing/)
 
 ## Requirements
