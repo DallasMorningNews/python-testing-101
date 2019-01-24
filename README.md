@@ -21,9 +21,19 @@ This repo contains the files for the #NICAR18 session "[Python: Writing Tests Fo
 
 _Optional_
 
-- `virtualenv`
+- `virtualenv` or `pipenv`
 
 ## Installation
+
+#### Using `pipenv`
+
+1. Install dependencies and create a new virtual environment with `pipenv`:
+
+    ```sh
+    $ pipenv install
+    ```
+
+#### Using `virtualenv`
 
 1. _Optional:_ Create a virtual environment:
 
@@ -49,6 +59,8 @@ _Optional_
 
 ## Usage
 
+_The below should be run in your virtual environment if you're using one. For example, you should run `pipenv shell` before running the below if you're using `pipenv`._
+
 To run tests:
 
 ```sh
@@ -58,7 +70,7 @@ $ python tests.py
 To run tests and check test coverage:
 
 ```sh
-$ coverage run --omit='venv/**/*.py,tests.py' tests.py
+$ coverage run --omit='.venv/**/*.py,venv/**/*.py,tests.py' tests.py
 ```
 
 To view coverage information in the console:
